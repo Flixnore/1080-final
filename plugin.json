@@ -1,0 +1,23 @@
+{
+  "slug": "1080final",
+  "name": "1080final",
+  "version": "2.0.0",
+  "license": "proprietary",
+  "brand": "1080final",
+  "author": "JFK",
+  "authorEmail": "",
+  "authorUrl": "",
+  "pluginUrl": "",
+  "manualUrl": "",
+  "sourceUrl": "",
+  "donateUrl": "",
+  "changelogUrl": "",
+  "modules": [
+    {
+      "slug": "1080final",
+      "name": "1080final",
+      "description": "",
+      "tags": []
+    }
+  ]
+}
