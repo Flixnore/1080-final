@@ -3,7 +3,7 @@
 
 struct _1080final : Module {
 	enum ParamId {
-		PITCH_PARAM,
+		POTENTIO_PARAM,
 		PARAMS_LEN
 	};
 	enum InputId {
@@ -20,14 +20,16 @@ struct _1080final : Module {
 
 	_1080final() {
 		config(PARAMS_LEN, INPUTS_LEN, OUTPUTS_LEN, LIGHTS_LEN);
-		configParam(PITCH_PARAM, 0.f, 1.f, 0.5f, "");
+		configParam(POTENTIO_PARAM, 0.f, 1.f, 0.5f, "");
 		configInput(INPUT, "");
 		configOutput(OUTPUT, "");
 	}
 
 	void process(const ProcessArgs& args) override {
+		//get potentiometer value
+		float potentiometer = params[POTENTIO_PARAM].getValue();
 		float pitch = inputs[INPUT].getVoltage();
-		outputs[OUTPUT].setVoltage(pitch);
+		outputs[OUTPUT].setVoltage(pitch * potentiometer);
 	}
 };
 
@@ -42,7 +44,7 @@ struct _1080finalWidget : ModuleWidget {
 		addChild(createWidget<ScrewSilver>(Vec(RACK_GRID_WIDTH, RACK_GRID_HEIGHT - RACK_GRID_WIDTH)));
 		addChild(createWidget<ScrewSilver>(Vec(box.size.x - 2 * RACK_GRID_WIDTH, RACK_GRID_HEIGHT - RACK_GRID_WIDTH)));
 
-		addParam(createParamCentered<RoundBlackKnob>(mm2px(Vec(15.24, 46.063)), module, _1080final::PITCH_PARAM));
+		addParam(createParamCentered<RoundBlackKnob>(mm2px(Vec(15.24, 46.063)), module, _1080final::POTENTIO_PARAM));
 
 		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(8.818, 113.408)), module, _1080final::INPUT));
 
