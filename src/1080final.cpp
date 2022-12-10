@@ -7,11 +7,11 @@ struct _1080final : Module {
 		PARAMS_LEN
 	};
 	enum InputId {
-		PITCH_INPUT,
+		INPUT, // Not actually pitch
 		INPUTS_LEN
 	};
 	enum OutputId {
-		SINE_OUTPUT,
+		OUTPUT,
 		OUTPUTS_LEN
 	};
 	enum LightId {
@@ -20,12 +20,14 @@ struct _1080final : Module {
 
 	_1080final() {
 		config(PARAMS_LEN, INPUTS_LEN, OUTPUTS_LEN, LIGHTS_LEN);
-		configParam(PITCH_PARAM, 0.f, 1.f, 0.f, "");
-		configInput(PITCH_INPUT, "");
-		configOutput(SINE_OUTPUT, "");
+		configParam(PITCH_PARAM, 0.f, 1.f, 0.5f, "");
+		configInput(INPUT, "");
+		configOutput(OUTPUT, "");
 	}
 
 	void process(const ProcessArgs& args) override {
+		float pitch = inputs[INPUT].getVoltage();
+		outputs[OUTPUT].setVoltage(pitch);
 	}
 };
 
@@ -42,9 +44,9 @@ struct _1080finalWidget : ModuleWidget {
 
 		addParam(createParamCentered<RoundBlackKnob>(mm2px(Vec(15.24, 46.063)), module, _1080final::PITCH_PARAM));
 
-		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(8.818, 113.408)), module, _1080final::PITCH_INPUT));
+		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(8.818, 113.408)), module, _1080final::INPUT));
 
-		addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(21.531, 113.075)), module, _1080final::SINE_OUTPUT));
+		addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(21.531, 113.075)), module, _1080final::OUTPUT));
 	}
 };
 
