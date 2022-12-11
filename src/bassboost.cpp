@@ -25,7 +25,27 @@ struct Bassboost : Module {
 		configOutput(OUTPUT_OUTPUT, "");
 	}
 
+  // Low-pass filter to remove high frequency components
+  dsp::RCFilter lowpass;
+  // Variable to store the boost amount
+  float boostAmount = 0.0f;
+
 	void process(const ProcessArgs& args) override {
+		// Get the boost amount from the BOOST_PARAM parameter
+		boostAmount = params[BOOST_PARAM].getValue();
+
+		// Get the input signal
+		float input = inputs[INPUT_INPUT].getVoltage();
+
+		// Filter out high frequency components
+		lowpass.setCutoffFreq(200.0f + (2000.0f * boostAmount));
+		lowpass.process(input);
+
+		// Boost the filtered signal
+		float output = input * (1.0f + boostAmount);
+
+		// Output the boosted signal
+		outputs[OUTPUT_OUTPUT].setVoltage(output);
 	}
 };
 
