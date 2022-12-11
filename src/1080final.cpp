@@ -38,6 +38,10 @@ struct _1080final : Module {
         return std::exp(potentiometer) * std::cbrt(-10 * pitch);
     }
 
+    float electra2(float potentiometer, float pitch) {
+        return std::exp(potentiometer) * std::pow(pitch, 1.0/7.0);
+    }
+
     float square_wave(float pitch, int iterations) {
         float t = std::asin(pitch);
         //float omega = 2 * pi * pitch;
