@@ -108,11 +108,11 @@ struct _1080finalWidget : ModuleWidget {
 		addChild(createWidget<ScrewSilver>(Vec(RACK_GRID_WIDTH, RACK_GRID_HEIGHT - RACK_GRID_WIDTH)));
 		addChild(createWidget<ScrewSilver>(Vec(box.size.x - 2 * RACK_GRID_WIDTH, RACK_GRID_HEIGHT - RACK_GRID_WIDTH)));
 
-		addParam(createParamCentered<RoundBlackKnob>(mm2px(Vec(15.24, 46.063)), module, _1080final::POTENTIO_PARAM));
+		addParam(createParamCentered<RoundBlackKnob>(mm2px(Vec(24.349, 86.989)), module, _1080final::POTENTIO_PARAM));
 
-		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(8.818, 113.408)), module, _1080final::INPUT));
+		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(9.642, 114.972)), module, _1080final::INPUT));
 
-		addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(21.531, 113.075)), module, _1080final::OUTPUT));
+		addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(39.874, 115.158)), module, _1080final::OUTPUT));
 	}
 };
 

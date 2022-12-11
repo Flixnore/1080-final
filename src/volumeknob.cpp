@@ -20,12 +20,20 @@ struct Volumeknob : Module {
 
 	Volumeknob() {
 		config(PARAMS_LEN, INPUTS_LEN, OUTPUTS_LEN, LIGHTS_LEN);
-		configParam(BOOST_PARAM, 0.f, 1.f, 0.f, "");
+		configParam(BOOST_PARAM, 0.f, 2.f, 1.f, "");
 		configInput(INPUT_INPUT, "");
 		configOutput(OUTPUT_OUTPUT, "");
 	}
 
 	void process(const ProcessArgs& args) override {
+		// read input
+		float input = inputs[INPUT_INPUT].getVoltage();
+		// read knob
+		float knob = params[BOOST_PARAM].getValue();
+		// calculate output
+		float output = input * knob;
+		// write output
+		outputs[OUTPUT_OUTPUT].setVoltage(output);
 	}
 };
 
