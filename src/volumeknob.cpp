@@ -49,4 +49,4 @@ struct VolumeknobWidget : ModuleWidget {
 };
 
 
-Model* modelVolumeknob = createModel<Volumeknob, VolumeknobWidget>("volumeknob");
+Model* model_volumeknob = createModel<Volumeknob, VolumeknobWidget>("volumeknob");
