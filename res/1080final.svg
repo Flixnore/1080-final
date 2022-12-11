@@ -2,12 +2,12 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="30.48mm"
+   width="50.799999mm"
    height="128.5mm"
-   viewBox="0 0 30.480002 128.50002"
+   viewBox="0 0 50.800003 128.50002"
    version="1.1"
    id="svg8"
-   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   inkscape:version="1.2.2 (b0a84865, 2022-12-01)"
    sodipodi:docname="1080final.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.98994949"
-     inkscape:cx="338.4011"
-     inkscape:cy="361.12954"
+     inkscape:zoom="1.1434898"
+     inkscape:cx="83.953526"
+     inkscape:cy="230.8722"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -36,14 +36,16 @@
      inkscape:snap-page="true"
      inkscape:bbox-nodes="false"
      inkscape:snap-bbox-edge-midpoints="false"
-     inkscape:window-width="1920"
-     inkscape:window-height="1007"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
-     inkscape:window-maximized="1"
+     inkscape:window-width="798"
+     inkscape:window-height="838"
+     inkscape:window-x="714"
+     inkscape:window-y="38"
+     inkscape:window-maximized="0"
      inkscape:snap-bbox-midpoints="true"
      inkscape:snap-nodes="false"
-     inkscape:pagecheckerboard="0" />
+     inkscape:pagecheckerboard="0"
+     inkscape:showpageshadow="2"
+     inkscape:deskcolor="#d1d1d1" />
   <metadata
      id="metadata5">
     <rdf:RDF>
@@ -52,7 +54,6 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -112,27 +113,6 @@
          d="m 27.718002,222.14498 q -0.0534,-0.031 -0.117133,-0.0448 -0.06201,-0.0155 -0.137804,-0.0155 -0.268718,0 -0.413412,0.1757 -0.142972,0.17398 -0.142972,0.50126 v 1.0163 H 26.58801 v -1.92925 h 0.318671 v 0.29972 q 0.09991,-0.1757 0.260105,-0.2601 0.160197,-0.0861 0.389296,-0.0861 0.03273,0 0.07235,0.005 0.03962,0.003 0.08785,0.0121 z"
          id="path15773" />
     </g>
-    <circle
-       style="display:inline;vector-effect:none;fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
-       id="path4954-6"
-       cx="15.074741"
-       cy="214.84041"
-       r="4"
-       inkscape:label="pitch" />
-    <circle
-       r="4"
-       cy="282.18503"
-       cx="8.6531258"
-       id="circle4956"
-       style="display:inline;vector-effect:none;fill:#00ff00;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
-       inkscape:label="pitch" />
-    <circle
-       style="display:inline;vector-effect:none;fill:#0000ff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
-       id="circle4958"
-       cx="21.366207"
-       cy="281.85181"
-       r="4"
-       inkscape:label="sine" />
   </g>
   <g
      inkscape:groupmode="layer"
