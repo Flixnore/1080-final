@@ -93,7 +93,7 @@ struct _1080final : Module {
 
         //outputs[OUTPUT].setVoltage(electra(potentiometer, pitch));
         //outputs[OUTPUT].setVoltage(boost_effect_pedals(pitch, 5));
-        outputs[OUTPUT].setVoltage(electra(pitch, potentiometer));
+        outputs[OUTPUT].setVoltage(electra(potentiometer, pitch));
 	}
 };
 
