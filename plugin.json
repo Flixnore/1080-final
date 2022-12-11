@@ -18,6 +18,12 @@
       "name": "1080final",
       "description": "",
       "tags": []
+    },
+    {
+      "slug": "bassboost",
+      "name": "bassboost",
+      "description": "boost bass",
+      "tags": []
     }
   ]
 }
