@@ -49,4 +49,4 @@ struct BassboostWidget : ModuleWidget {
 };
 
 
-Model* modelBassboost = createModel<Bassboost, BassboostWidget>("bassboost");
+Model* model_bassboost= createModel<Bassboost, BassboostWidget>("bassboost");
