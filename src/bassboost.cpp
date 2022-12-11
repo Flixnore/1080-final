@@ -42,7 +42,7 @@ struct Bassboost : Module {
 		lowpass.process(input);
 
 		// Boost the filtered signal
-		float output = input * (1.0f + boostAmount);
+		float output = input * (5.0f + boostAmount);
 
 		// Output the boosted signal
 		outputs[OUTPUT_OUTPUT].setVoltage(output);
