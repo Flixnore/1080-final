@@ -1,4 +1,7 @@
 #include "plugin.hpp"
+#include <cmath>
+#include <stdio.h>
+#include <stdlib.h>
 
 
 struct _1080final : Module {
@@ -25,11 +28,25 @@ struct _1080final : Module {
 		configOutput(OUTPUT, "");
 	}
 
+    float seed() {
+        return std::log(rand() * rand());
+    }
+
+    float electra(float potentiometer, float pitch) {
+        return std::exp(potentiometer) * std::cbrt(-10 * pitch);
+    }
+
 	void process(const ProcessArgs& args) override {
 		//get potentiometer value
 		float potentiometer = params[POTENTIO_PARAM].getValue();
 		float pitch = inputs[INPUT].getVoltage();
-		outputs[OUTPUT].setVoltage(pitch * potentiometer);
+		//outputs[OUTPUT].setVoltage(pitch * potentiometer);
+        //float output_signal = pitch;
+        //output_signal = std::sin(seed() * pitch);
+        //output_signal *= std::cos(potentiometer) + std::exp(pitch);
+        //output_signal *= std::exp(std::exp(potentiometer) + std::exp(pitch));
+        //output_signal = std::log(output_signal);
+        outputs[OUTPUT].setVoltage(electra(potentiometer, pitch));
 	}
 };
 
