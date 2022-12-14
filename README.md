@@ -10,7 +10,7 @@ Export the environment variable (for me like this): `export RACK_DIR=/home/felix
 
 Run `make install`
 
-Open VCV Rack, module should be there
+Open VCV Rack, and type "1080" in the module selection screen and the three modules should be there!
 
 If this doesn't work, follow more detailed instructions a [VCV Rack Plugin Development](https://vcvrack.com/manual/PluginDevelopmentTutorial)
 
