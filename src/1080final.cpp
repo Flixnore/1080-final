@@ -35,22 +35,19 @@ struct _1080final : Module {
     }
 
     float electra(float potentiometer, float pitch) {
-        return std::exp(potentiometer) * std::cbrt(-10 * pitch);
+        return std::exp(potentiometer) * -3 * std::cbrt(pitch);
     }
 
-    float electra2(float potentiometer, float pitch) {
-        return std::exp(potentiometer) * std::pow(pitch, 1.0/7.0);
-    }
-
+    // series approximation for square wave
     float square_wave(float pitch, int iterations) {
         float t = std::asin(pitch);
-        //float omega = 2 * pi * pitch;
-        //float omega = 2 * pi * t;
+        float omega = 2 * pi * t;
 
         float result = 0;
         int constant = 1;
         for (int i = 0; i < iterations; i++) {
-            result += std::sin(constant * t);
+            // result += std::sin(constant * t);
+            result += std::sin(constant * omega *t);
             constant += 2;
         }
 
@@ -88,15 +85,6 @@ struct _1080final : Module {
 		//get potentiometer value
 		float potentiometer = params[POTENTIO_PARAM].getValue();
 		float pitch = inputs[INPUT].getVoltage();
-		//outputs[OUTPUT].setVoltage(pitch * potentiometer);
-        //float output_signal = pitch;
-        //output_signal = std::sin(seed() * pitch);
-        //output_signal *= std::cos(potentiometer) + std::exp(pitch);
-        //output_signal *= std::exp(std::exp(potentiometer) + std::exp(pitch));
-        //output_signal = std::log(output_signal);
-
-        //outputs[OUTPUT].setVoltage(electra(potentiometer, pitch));
-        //outputs[OUTPUT].setVoltage(boost_effect_pedals(pitch, 5));
         outputs[OUTPUT].setVoltage(electra(potentiometer, pitch));
 	}
 };

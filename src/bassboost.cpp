@@ -27,6 +27,7 @@ struct Bassboost : Module {
 
   // Low-pass filter to remove high frequency components
   dsp::RCFilter lowpass;
+
   // Variable to store the boost amount
   float boostAmount = 0.0f;
 
